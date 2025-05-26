@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki Bikes - Все про велосипеди</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Хедер -->
+        <header>
+            <div class="container">
+                <div class="logo-block">
+                    <img src="images/logo.png" alt="Логотип Wiki Bikes">
+                    <span>Wiki Bikes</span>
+                </div>
+                <nav class="desktop-menu">
+                    <a href="index.html" class="active">Головна</a>
+                    <a href="history.html">Історія</a>
+                    <a href="types.html">Типи велосипедів</a>
+                    <a href="maintenance.html">Технічне обслуговування</a>
+                    <a href="contacts.html">Контакти</a>
+                </nav>
+                <div class="header-burger">
+                    <span class="header-burger_line"></span>
+                    <span class="header-burger_line"></span>
+                    <span class="header-burger_line"></span>
+                    <span class="header-burger_line"></span>
+                </div>
+                <nav class="mobile-menu">
+                    <a href="index.html" class="active">Головна</a>
+                    <a href="history.html">Історія</a>
+                    <a href="types.html">Типи велосипедів</a>
+                    <a href="maintenance.html">Технічне обслуговування</a>
+                    <a href="contacts.html">Контакти</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Основний контент -->
+        <main>
+            <!-- Секція Introduction -->
+            <section class="introduction">
+                <div class="container">
+                    <div class="introduction-wrap">
+                        <div class="introduction-textBlock">
+                            <h2>Ласкаво просимо до Wiki Bikes</h2>
+                            <p>Тут ви знайдете всю необхідну інформацію про велосипеди: від історії їх створення до порад з технічного обслуговування.</p>
+                        </div>
+                        <div class="introduction-image">
+                            <img src="images/bike.jpg" alt="Шосейний велосипед">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Секція Social Block -->
+            <section class="social-block">
+                <div class="container">
+                    <div class="social-wrap">
+                        <div class="social-img-wrap">
+                            <img src="images/bike2.jpg" alt="Гірський велосипед">
+                            <ul class="social-row">
+                                <li><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
+                                <li><a href="#"><img src="images/x.png" alt="Twitter"></a></li>
+                                <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+                                <li><a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a></li>
+                            </ul>
+                        </div>
+                        <div class="social-textBlock">
+                            <h3>Дізнайтесь більше про велосипеди</h3>
+                            <p>Ми пропонуємо детальні статті про різні типи велосипедів, їх історію та сучасні технології.</p>
+                            <p>Долучайтесь до спільноти любителів велосипедів і діліться своїм досвідом!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer>
+            <p>© 2025 Wiki Bikes. Всі права захищені.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript для бургер-меню -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const burger = document.querySelector(".header-burger");
+            const menu = document.querySelector(".mobile-menu");
+            burger.addEventListener("click", function() {
+                this.classList.toggle("active");
+                menu.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>

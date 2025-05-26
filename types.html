@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki Bikes - Типи велосипедів</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Хедер -->
+        <header>
+            <div class="container">
+                <div class="logo-block">
+                    <img src="images/logo.png" alt="Логотип Wiki Bikes">
+                    <span>Wiki Bikes</span>
+                </div>
+                <nav class="desktop-menu">
+                    <a href="index.html">Головна</a>
+                    <a href="history.html">Історія</a>
+                    <a href="types.html" class="active">Типи велосипедів</a>
+                    <a href="maintenance.html">Технічне обслуговування</a>
+                    <a href="contacts.html">Контакти</a>
+                </nav>
+                <div class="header-burger">
+                    <span class="header-burger_line"></span>
+                    <span class="header-burger_line"></span>
+                    <span class="header-burger_line"></span>
+                    <span class="header-burger_line"></span>
+                </div>
+                <nav class="mobile-menu">
+                    <a href="index.html">Головна</a>
+                    <a href="history.html">Історія</a>
+                    <a href="types.html" class="active">Типи велосипедів</a>
+                    <a href="maintenance.html">Технічне обслуговування</a>
+                    <a href="contacts.html">Контакти</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Основний контент -->
+        <main>
+            <section class="content">
+                <div class="container">
+                    <h2>Типи велосипедів</h2>
+                    <p>Існує багато типів велосипедів, кожен із яких призначений для різних цілей:</p>
+                    <ul>
+                        <li>
+                            Шосейні велосипеди – для швидкої їзди по асфальту.
+                            <div class="bike-image">
+                                <img src="images/road.jpg" alt="Шосейний велосипед">
+                            </div>
+                        </li>
+                        <li>
+                            Гірські велосипеди – для їзди по пересіченій місцевості.
+                            <div class="bike-image">
+                                <img src="images/mountain.jpg" alt="Гірський велосипед">
+                            </div>
+                        </li>
+                        <li>
+                            Міські велосипеди – для комфортного пересування містом.
+                            <div class="bike-image">
+                                <img src="images/city.jpg" alt="Міський велосипед">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer>
+            <p>© 2025 Wiki Bikes. Всі права захищені.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript для бургер-меню -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const burger = document.querySelector(".header-burger");
+            const menu = document.querySelector(".mobile-menu");
+            burger.addEventListener("click", function() {
+                this.classList.toggle("active");
+                menu.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>

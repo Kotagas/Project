@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki Bikes - Контакти</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Хедер -->
+        <header>
+            <div class="container">
+                <div class="logo-block">
+                    <img src="images/logo.png" alt="Логотип Wiki Bikes">
+                    <span>Wiki Bikes</span>
+                </div>
+                <nav class="desktop-menu">
+                    <a href="index.html">Головна</a>
+                    <a href="history.html">Історія</a>
+                    <a href="types.html">Типи велосипедів</a>
+                    <a href="maintenance.html">Технічне обслуговування</a>
+                    <a href="contacts.html" class="active">Контакти</a>
+                </nav>
+                <div class="header-burger">
+                    <span class="header-burger_line"></span>
+                    <span class="header-burger_line"></span>
+                    <span class="header-burger_line"></span>
+                    <span class="header-burger_line"></span>
+                </div>
+                <nav class="mobile-menu">
+                    <a href="index.html">Головна</a>
+                    <a href="history.html">Історія</a>
+                    <a href="types.html">Типи велосипедів</a>
+                    <a href="maintenance.html">Технічне обслуговування</a>
+                    <a href="contacts.html" class="active">Контакти</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Основний контент -->
+        <main>
+            <section class="content">
+                <div class="container">
+                    <h2>Контакти</h2>
+                    <p>Зв’яжіться з нами, якщо у вас є питання чи пропозиції:</p>
+                    <p>Email: <a href="mailto:info@wikibikes.com">info@wikibikes.com</a></p>
+                    <p>Телефон: +380 123 456 789</p>
+                </div>
+            </section>
+            <section id="contact">
+                <h2>Зворотний зв'язок</h2>
+                <form action="mailto:info@wikibikes.com" method="post" enctype="text/plain">
+                    <label for="name">Ім'я:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Електронна пошта:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Повідомлення:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <button type="submit">Надіслати</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer>
+            <p>© 2025 Wiki Bikes. Всі права захищені.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript для бургер-меню -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const burger = document.querySelector(".header-burger");
+            const menu = document.querySelector(".mobile-menu");
+            burger.addEventListener("click", function() {
+                this.classList.toggle("active");
+                menu.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,3 +1,4 @@
+/* Загальні скидання відступів */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +9,12 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #333333;
     background-color: #F5F5F5;
+    overflow-x: hidden;
 }
 
+/* =======================
+   Основна сітка сторінки
+   ======================= */
 .grid-container {
     display: grid;
     grid-template-areas:
@@ -19,7 +24,12 @@ body {
         "footer";
     grid-gap: 20px;
     padding: 20px;
-    justify-content: center; /* Центруємо вміст сітки */
+
+    /* Центруємо і обмежуємо ширину всієї сітки */
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center; /* Додатково, щоб вирівнювати контент усередині сітки */
 }
 
 @media (min-width: 768px) {
@@ -32,23 +42,24 @@ body {
     }
 }
 
-header { grid-area: header; }
-nav { grid-area: nav; }
-main { grid-area: main; }
-footer { grid-area: footer; }
-
+/* =======================
+   Обгортка для секцій
+   ======================= */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    text-align: center; /* Центруємо текстовий вміст */
+    text-align: center;       /* Центруємо текст */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центруємо елементи по горизонталі */
+    align-items: center;      /* Центруємо елементи по горизонталі */
 }
 
-/* Стилі для хедера */
+/* =======================
+   Хедер
+   ======================= */
 header {
+    grid-area: header;
     background-color: #2E8B57;
     color: white;
     padding: 20px 0;
@@ -59,7 +70,7 @@ header {
     display: flex;
     align-items: center;
     gap: 12px;
-    justify-content: center; /* Центруємо логотип */
+    justify-content: center; /* Центруємо лого */
 }
 
 .logo-block img {
@@ -76,11 +87,11 @@ header {
 
 .desktop-menu {
     display: flex;
-    justify-content: center; /* Центруємо пункти меню */
-    gap: 20px; /* Додаємо проміжки між пунктами */
+    justify-content: center; /* Центруємо меню */
+    gap: 20px;
     width: 100%;
     max-width: 600px;
-    margin: 10px auto; /* Центруємо меню */
+    margin: 10px auto;
 }
 
 .desktop-menu a {
@@ -125,7 +136,8 @@ header {
 }
 
 .header-burger_line:nth-child(1) { top: 0; }
-.header-burger_line:nth-child(2), .header-burger_line:nth-child(3) {
+.header-burger_line:nth-child(2),
+.header-burger_line:nth-child(3) {
     top: 50%;
     transform: translateY(-50%);
 }
@@ -177,14 +189,16 @@ header {
     color: #FFD700;
 }
 
-/* Секція Introduction */
+/* =======================
+   Секція Introduction
+   ======================= */
 .introduction {
     padding: 40px 0;
     width: 100%;
 }
 
 .introduction-wrap {
-    display: flex; /* Змінено на flex для кращого контролю вирівнювання */
+    display: flex; /* Flex, щоб мати контроль над вирівнюванням */
     flex-wrap: wrap;
     gap: 40px;
     justify-content: center; /* Центруємо вміст */
@@ -192,8 +206,8 @@ header {
 }
 
 .introduction-textBlock {
-    max-width: 500px; /* Обмежуємо ширину тексту */
-    text-align: left; /* Залишаємо вирівнювання зліва для тексту */
+    max-width: 500px;
+    text-align: left; /* Текст вирівнюється по лівому краю */
 }
 
 .introduction-textBlock h2 {
@@ -213,7 +227,7 @@ header {
 }
 
 .introduction-image {
-    max-width: 500px; /* Обмежуємо ширину зображення */
+    max-width: 500px;
 }
 
 .introduction-image img {
@@ -223,7 +237,9 @@ header {
     object-fit: cover;
 }
 
-/* Секція Social Block */
+/* =======================
+   Секція Social Block
+   ======================= */
 .social-block {
     padding: 40px 0;
     width: 100%;
@@ -233,7 +249,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    justify-content: center; /* Центруємо вміст */
+    justify-content: center; /* Центруємо картинки та текст */
     align-items: center;
 }
 
@@ -280,7 +296,7 @@ header {
 }
 
 .social-textBlock {
-    max-width: 500px; /* Обмежуємо ширину тексту */
+    max-width: 500px;
 }
 
 .social-textBlock h3 {
@@ -299,7 +315,9 @@ header {
     margin-bottom: 16px;
 }
 
-/* Секція Content */
+/* =======================
+   Секція Content
+   ======================= */
 .content {
     padding: 40px 0;
     width: 100%;
@@ -327,11 +345,11 @@ header {
 .content ul {
     list-style: disc;
     margin: 0 auto;
-    max-width: 800px; /* Центруємо список */
+    max-width: 800px; /* Обмежуємо ширину списку */
     font-size: 18px;
     line-height: 24px;
     color: #333333;
-    text-align: left; /* Список вирівнюємо зліва для читабельності */
+    text-align: left; /* Текст списку вирівнюється по лівому краю */
 }
 
 .content ul li {
@@ -339,8 +357,8 @@ header {
 }
 
 .bike-image {
-    margin: 20px auto; /* Центруємо зображення */
-    max-width: 200px; /* Обмежуємо ширину */
+    margin: 20px auto; /* Центруємо картинку */
+    max-width: 200px;
 }
 
 .bike-image img {
@@ -350,7 +368,9 @@ header {
     object-fit: cover;
 }
 
-/* Секція Contact */
+/* =======================
+   Секція Contact (форма та інформація)
+   ======================= */
 #contact {
     background-color: #F5F5F5;
     padding: 40px 20px;
@@ -366,21 +386,22 @@ header {
     margin-bottom: 20px;
 }
 
-#contact form {
+#contact .container {
     max-width: 600px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центруємо форму */
+    align-items: center; /* Центруємо форму по горизонталі */
 }
 
 #contact label {
     margin-top: 10px;
     color: #333333;
-    width: 100%; /* Забезпечуємо повну ширину для міток */
+    width: 100%;
 }
 
-#contact input, #contact textarea {
+#contact input,
+#contact textarea {
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
@@ -396,15 +417,18 @@ header {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 200px; /* Фіксована ширина кнопки */
+    width: 200px;
 }
 
 #contact button:hover {
     background-color: #246b45;
 }
 
-/* Футер */
+/* =======================
+   Футер
+   ======================= */
 footer {
+    grid-area: footer;
     background-color: #2E8B57;
     color: white;
     text-align: center;
@@ -412,10 +436,12 @@ footer {
     width: 100%;
 }
 
-/* Адаптивність */
+/* =======================
+   Адаптивні стилі
+   ======================= */
 @media screen and (max-width: 720px) {
     .grid-container {
-        padding: 10px; /* Менше відступів для мобільних */
+        padding: 10px;
     }
 
     header {
@@ -441,8 +467,7 @@ footer {
     }
 
     .introduction-textBlock {
-        padding-top: 0;
-        max-width: 100%; /* Повна ширина на мобільних */
+        max-width: 100%;
     }
 
     .introduction-textBlock h2 {
@@ -475,13 +500,15 @@ footer {
         line-height: 42px;
     }
 
-    .content h2, #contact h2 {
+    .content h2,
+    #contact h2 {
         font-size: 30px;
         line-height: 42px;
     }
 
-    .content p, .content ul {
-        max-width: 100%; /* Повна ширина на мобільних */
+    .content p,
+    .content ul {
+        max-width: 100%;
     }
 
     .bike-image {
